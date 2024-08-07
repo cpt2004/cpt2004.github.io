@@ -257,7 +257,8 @@ form{
         padding: 0.5vmax;
         font-family: "DM Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 400;
+        font-size: 1.4vmax;
+        font-weight: 300;
         font-style: normal;
         cursor: url(icons/text-cursor.png), auto;
     }
@@ -269,7 +270,8 @@ form{
         padding: 0.5vmax;
         font-family: "DM Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 400;
+        font-size: 1.4vmax;
+        font-weight: 300;
         font-style: normal;
         cursor: url(icons/text-cursor.png), auto;
         resize: none;
