@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* .dm-sans{
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+} */
+
+:root{
+    --background: #dce1f1;
+    --text: black;
+    --primary: #712aff;
+    --accent: #250a48;
+}
+
+@keyframes enter-from-left {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-from-right {
+    from {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-left {
+    animation: enter-from-left 0.8s ease-out forwards;
+}
+
+.animate-right {
+    animation: enter-from-right 0.8s ease-out forwards;
+}
+
+body{
+    user-select: none;
+    cursor: url(icons/cursor.svg), auto;
+    background: #dce1f183;
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    p{
+        margin: 0%;
+    }
+}
+
+.container{
+    padding : 0 8% 0 8%
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.2vmax solid;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: blink-caret 0.75s step-end infinite;
+}
+  
+.typewriter-text {
+    display: inline-block;
+    font-size: 2em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 11ch }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+.header{
+    overflow: hidden;
+    position: relative;
+    animation: slideInFromTop .7s ease-out forwards;
+    padding: 1% 4% 0 4%;
+    margin-bottom: 6vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vmax;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 2vmax;
+    a{
+        display: flex;
+        align-items: center;
+        cursor: url(icons/cursor-select.svg), auto;
+    }
+}
+
+.social-icons{
+    width: 2vmax;
+    height: 2vmax;
+    padding: 0.5vmax;
+    cursor: url(icons/cursor-select.svg), auto;
+}
+
+.logo{
+    width: 3vmax;
+    height: 3vmax;
+}
+
+.download-resume{
+    padding: 1vmax 1vmax 1vmax 1vmax;
+    background-color: var(--accent);
+    color: white;
+    font-size: 1vmax;
+    border: solid var(--accent) 3px;
+    border-radius: 24px;
+    width: 12vmax;
+    cursor: url(icons/cursor-select.svg), auto;
+    transition: all 200ms;
+}
+
+.download-resume:hover{
+    background-color: white;
+    color: var(--primary);
+    border: dotted var(--accent) 3px;
+}
+
+.download-resume:active{
+    background-color: var(--accent);
+}
+
+.title{
+    background: linear-gradient(to right, 
+        var(--primary),
+        var(--primary),
+        var(--accent),
+        var(--primary),
+        var(--accent),
+        var(--primary)
+    );
+
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 5vmax;
+    font-weight: 700;
+    margin: 0%;
+    padding: 0%;
+}
+
+.tagline{
+    font-size: 2vmax;
+    font-weight: 600;
+}
+
+.bio{
+    padding: 2vmax 0 2vmax 0;
+    text-align: justify;
+    font-size: 1.4vmax;
+    font-weight: 300;
+}
+
+.sub-titles{
+    font-size: 1.5vmax;
+    font-weight: 600;
+}
+
+.sub-text{
+    font-size: 1.4vmax;
+    font-weight: 300;
+    color: black;
+}
+
+ul{
+    margin: 1vmax 0 1vmax 0;
+    padding: 0 0 0 2vmax;
+    li{
+        padding: 0 0 1vmax 0;
+    }
+    li::marker{
+        font-size: 1vmax;
+    }
+}
+
+.projects-details{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0 1vmax;
+    a{
+        text-decoration: none;
+        border-radius: 16px;
+        cursor: url(icons/cursor-select.svg), auto;
+        transition: all 0.6s;
+    }
+    a:hover{
+        background-color: #dce1f1;
+    }
+    a:active{
+        background-color: #868992;
+    }
+
+}
+
+.project{
+    padding: 1vmax;
+    margin: 0.5vmax;
+    border-radius: 16px;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0 1vmax;
+}
+
+.skillset:nth-child(odd){
+    border-radius: 16px;
+    padding: 1vmax;
+}
+
+.skillset{
+    border-radius: 16px;
+    padding: 1vmax;
+    transition: all .6s;
+}
+
+.skillset:hover{
+    background-color: #dce1f1;
+}
+
+form{
+    display: inline-block;
+    label{
+        font-size: 1.4vmax;
+        font-weight: 300;
+        cursor: url(icons/cursor.svg), auto;
+    }
+    input{
+        border: solid #712aff 1px;
+        border-radius: 6px;
+        height: 3vmax;
+        width: 23vmax;
+        padding: 0.5vmax;
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        cursor: url(icons/text-cursor.png), auto;
+    }
+    textarea{
+        border: solid #712aff 1px;
+        border-radius: 6px;
+        height: 6vmax;
+        width: 23vmax;
+        padding: 0.5vmax;
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        cursor: url(icons/text-cursor.png), auto;
+        resize: none;
+    }
+    button{
+        cursor: url(icons/cursor-select.svg), auto;
+        padding: 0.5vmax;
+        background-color: var(--accent);
+        color: white;
+        font-size: 1vmax;
+        border: solid var(--accent) 3px;
+        border-radius: 24px;
+        width: 8vmax;
+        transition: all 200ms;
+    }
+    button:hover{
+        background-color: white;
+        color: var(--primary);
+        border: dotted var(--accent) 3px;
+    }
+    button:active{
+        background-color: var(--accent);
+    }
+}
+
+table{
+    td{
+        padding: 0 2vmax 0 2vmax;
+    }
+}
+
+#contact-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap:3vmax;
+    align-items: center;
+}
+
+.footer{
+    text-align: center;
+    font-size: 1vmax;
+}
