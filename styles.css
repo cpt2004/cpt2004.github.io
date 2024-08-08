@@ -7,6 +7,10 @@
   font-style: normal;
 } */
 
+html{
+  scroll-behaviour: smooth;
+}
+
 :root{
     --background: #dce1f1;
     --text: black;
